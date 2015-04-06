@@ -68,8 +68,8 @@
 				<td>{{book.SubTitle}}</td>
 				<td>{{book.isbn}}</td>
 				<td>
-					<form action="/SpringAngular/details" method="get">
-						<input type="submit" value="details">
+					<form action="/SpringAngular/details/"+{{book.isbn}} method="post">
+						<input type="submit" value="{{book.isbn}}" path="id" name="isbn">
 					</form>
 				</td>
 			</tr>

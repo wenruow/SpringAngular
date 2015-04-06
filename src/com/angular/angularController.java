@@ -3,6 +3,8 @@ package com.angular;
 //import org.springframework.stereotype.Controller;
 import java.util.concurrent.atomic.AtomicLong;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,8 +26,10 @@ public class angularController {
 		return new ModelAndView("/static/000","result",result);
 	}
 	@RequestMapping(value="/details")
-	public ModelAndView toDetails(){
+	public ModelAndView toDetails(HttpServletRequest request ){
+		String id=request.getParameter("isbn");
+		System.out.println(id);
 		String result ="this is details";
-		return new ModelAndView("/details","result",result);
+		return new ModelAndView("/details","id",id);
 	}
 }

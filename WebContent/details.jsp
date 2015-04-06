@@ -7,6 +7,6 @@
 <title>Details</title>
 </head>
 <body>
-${result }
+${id }
 </body>
 </html>
