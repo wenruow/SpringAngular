@@ -12,7 +12,7 @@
 	var app = angular.module("DetailApp", []);
 	
 	app.controller("DetailController", function($scope, $http) {
-		var text = jQuery("#id").text();
+		var text = ${id }//jQuery("#id").text();
 		var down = "http://it-ebooks-api.info/v1/book/" + text;
 		$http.get(down).success(function(response) {
 			$scope.details = response;
@@ -24,7 +24,7 @@
 <title>Details</title>
 </head>
 <body ng-app="DetailApp">
-	<div ng-controller="DetailController">
+	<div ng-controller="DetailController" class="container">
 	<h4>ISBN:</h4>
 		<h4 id="id">${id }</h4>
 		<div ng-show="details">
