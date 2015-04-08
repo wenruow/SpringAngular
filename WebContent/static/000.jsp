@@ -56,6 +56,7 @@
 
 		<table class="table table-striped">
 			<tr>
+				<th>Poster</th>
 				<th>Title</th>
 				<th>SubTitle</th>
 				<th>isbn</th>
@@ -68,8 +69,8 @@
 				<td>{{book.SubTitle}}</td>
 				<td>{{book.isbn}}</td>
 				<td>
-					<form action="/SpringAngular/details/"+{{book.isbn}} method="post">
-						<input type="submit" value="{{book.isbn}}" path="id" name="isbn">
+					<form action="/SpringAngular/details/" method="post">
+						<input class="btn btn-default" type="submit" value="{{book.ID}}" path="id" name="ID">
 					</form>
 				</td>
 			</tr>

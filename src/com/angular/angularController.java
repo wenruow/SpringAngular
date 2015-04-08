@@ -27,7 +27,7 @@ public class angularController {
 	}
 	@RequestMapping(value="/details")
 	public ModelAndView toDetails(HttpServletRequest request ){
-		String id=request.getParameter("isbn");
+		String id=request.getParameter("ID");
 		System.out.println(id);
 		String result ="this is details";
 		return new ModelAndView("/details","id",id);
